@@ -51,6 +51,11 @@ var config_data = `
     }
   ],
   "auton": [
+   {
+      "name": "Move From Starting Point",
+      "code": "msp",
+      "type": "bool"
+    },
     {
       "name": "Auto Shooting Time",
       "code": "ast",
@@ -59,8 +64,13 @@ var config_data = `
       "type": "number"
     },
     {
-      "name": "Pass from Neutral Zone",
-      "code": "apn",
+      "name": "Shuttle Fuel",
+      "code": "sfa",
+      "type": "bool"
+    },
+    {
+      "name": "Floor Pickup",
+      "code": "fpa",
       "type": "bool"
     },
     {
@@ -73,21 +83,6 @@ var config_data = `
         "x": "Not Attempted"
       },
       "defaultValue": "x"
-    },
-    {
-      "name": "Pickup from Depot",
-      "code": "afd",
-      "type": "bool"
-    },
-    {
-      "name": "Pickup from Outpost",
-      "code": "afo",
-      "type": "bool"
-    },
-    {
-      "name": "Pickup from Neutral Zone",
-      "code": "aff",
-      "type": "bool"
     }
   ],
   "teleop": [
@@ -99,28 +94,18 @@ var config_data = `
       "type": "number"
     },
     {
-      "name": "Pass from Neutral Zone",
-      "code": "pnz",
-      "type": "bool"
-    },
-    {
-      "name": "Pass from Opp Alliance Zone",
-      "code": "poa",
-      "type": "bool"
-    },
-    {
-      "name": "Pickup from Depot",
-      "code": "tfd",
+      "name": "Shuttle Fuel",
+      "code": "sft",
       "type": "bool"
     },
     {
       "name": "Pickup from Outpost",
-      "code": "tfo",
+      "code": "pfo",
       "type": "bool"
     },
     {
-      "name": "Pickup from Floor",
-      "code": "tff",
+      "name": "Floor Pickup",
+      "code": "fpt",
       "type": "bool"
     },
     {
@@ -153,27 +138,22 @@ var config_data = `
     }
   ],
   "postmatch": [
-    {
+     {
       "name": "Defense Rating",
       "code": "dr",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
         "e": "Excellent<br>",
+        "g": "Good<br>",
+        "a": "Average<br>",
+        "b": "Below Average<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
-    },
-    {
-      "name": "Crossed Bump",
-      "code": "bmp",
-      "type": "bool"
-    },
-    {
-      "name": "Crossed Trench",
-      "code": "tre",
+     },
+     {
+      "name": "Was Defended",
+      "code": "def",
       "type": "bool"
     },
     {
@@ -187,13 +167,8 @@ var config_data = `
       "type": "bool"
     },
     {
-      "name": "Was Defended",
-      "code": "def",
-      "type": "bool"
-    },
-    {
-      "name": "Excessive Penalties",
-      "code": "pen",
+      "name": "Recieved Excessive Penalties",
+      "code": "rep",
       "type": "bool"
     },
     {
