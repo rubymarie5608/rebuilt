@@ -128,10 +128,10 @@ var config_data = `
       "code": "hps",
       "type": "radio",
       "choices": {
-        "a": "Made All",
-        "s": "Made Some",
-        "f": "Made Few",
-        "n": "Made None",
+        "a": "Made All<br>",
+        "s": "Made Some<br>",
+        "f": "Made Few<br>",
+        "n": "Made None<br>",
         "x": "Not Attempted"
       },
       "defaultValue": "x"
