@@ -55,39 +55,17 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "Auto Start Location",
-      "code": "as",
-      "type": "clickable_image",
-      "filename": "2026/half_field.png",
-      "clickRestriction": "one",
-      "dimensions": "7 10",
-      "allowableResponses": "4 11 18 25 32 39 46 53 60 67",
-      "shape": "circle 5 black red true"
-    }
   ],
   "auton": [
-    { "name": "Auto Shooting Location",
-      "code": "asl",
-      "type": "clickable_image",
-      "filename": "2026/half_field.png",
-      "dimensions": "7 10",
-      "allowableResponses": "1 2 3 4 8 9 10 11 15 16 17 18 22 23 24 25 29 30 31 32 36 37 38 39 43 44 45 46 50 51 52 53 57 58 59 60 64 65 66 67",
-      "expectedMax": 5,
-      "shape": "circle 5 black red true"
-    },
-    { "name": "Fuel Scored",
-      "code": "afs",
-      "expectedMax": 32,
-      "altInc1": 10,
-      "altInc2": 5,
-      "type": "counter"
+    { "name": "Auto Shooting Time",
+      "code": "ast",
+      "Max": 20,
+      "Min": 0,
+      "type": "number"
     },
     { "name": "Pass from Neutral Zone",
       "code": "apn",
-      "expectedMax": 60,
-      "altInc1": 10,
-      "altInc2": 5,
-      "type": "counter"
+      "type": "bool"
     },
     { "name": "Climb (L1)",
       "code": "ac",
@@ -113,35 +91,19 @@ var config_data = `
     }
   ],
   "teleop": [
-    { "name": "Shooting Locations",
-      "code": "tsl",
-      "type": "clickable_image",
-      "filename": "2026/half_field.png",
-      "dimensions": "7 10",
-      "allowableResponses": "1 2 3 4 8 9 10 11 15 16 17 18 22 23 24 25 29 30 31 32 36 37 38 39 43 44 45 46 50 51 52 53 57 58 59 60 64 65 66 67",
-      "expectedMax": 25,
-      "shape": "circle 5 black red true"
-    },
-    { "name": "Fuel Scored",
-      "code": "tfs",
-      "expectedMax": 150,
-      "altInc1": 10,
-      "altInc2": 5,
-      "type": "counter"
+    { "name": "Teleop Shooting Time",
+      "code": "tst",
+      "Max": 135,
+      "Min": 0,
+      "type": "number"
     },
     { "name": "Pass from Neutral Zone",
       "code": "pnz",
-      "expectedMax": 250,
-      "altInc1": 10,
-      "altInc2": 5,
-      "type": "counter"
+      "type": "bool"
     },
     { "name": "Pass from Opp Alliance Zone",
       "code": "poa",
-      "expectedMax": 250,
-      "altInc1": 10,
-      "altInc2": 5,
-      "type": "counter"
+      "type": "bool"
     },
     { "name": "Pickup from Depot",
       "code": "tfd",
@@ -154,6 +116,18 @@ var config_data = `
     { "name": "Pickup from Floor",
       "code": "tff",
       "type": "bool"
+    },
+     { "name": "Human Player Skill",
+      "code": "hps",
+      "type": "radio",
+      "choices": {
+        "a": "Made All",
+        "s": "Made Some",
+        "f": "Made Few",
+        "n": "Made None",
+        "x": "Not Attempted"
+      },
+      "defaultValue": "x"
     }
   ],
   "endgame": [
@@ -171,17 +145,6 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Driver Skill",
-      "code": "ds",
-      "type": "radio",
-      "choices": {
-        "n": "Not Effective<br>",
-        "a": "Average<br>",
-        "v": "Very Effective<br>",
-        "x": "Not Observed"
-      },
-      "defaultValue": "x"
-    },
     { "name": "Defense Rating",
       "code": "dr",
       "type": "radio",
@@ -193,18 +156,6 @@ var config_data = `
         "x": "Did not play defense"
       },
       "defaultValue": "x"
-    },
-    { "name": "Speed Rating",
-      "code": "sr",
-      "type": "radio",
-      "choices": {
-        "1": "1 (slow)<br>",
-        "2": "2<br>",
-        "3": "3<br>",
-        "4": "4<br>",
-        "5": "5 (fast)"
-      },
-      "defaultValue":"3"
     },
     { "name": "Crossed Bump",
       "code": "bmp",
@@ -222,11 +173,6 @@ var config_data = `
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
-      "type": "bool"
-    },
     { "name": "Was Defended",
       "code": "def",
       "type": "bool"
@@ -235,18 +181,11 @@ var config_data = `
       "code": "pen",
       "type": "bool"
     },
-    { "name": "Fuel Percentage",
-      "tooltip": "What percentage of the total fuel for this alliance did this robot score?",
-      "code": "pct",
-      "type": "number",
-      "min": 0,
-      "max": 100
-    },
     { "name": "Comments",
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 55
+      "maxSize": 100
     }
   ]
 }`;
