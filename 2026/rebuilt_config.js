@@ -5,27 +5,31 @@ var config_data = `
   "page_title": "REBUILT",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
+    {
+      "name": "Scouter Initials",
       "code": "s",
       "type": "scouter",
       "size": 5,
       "maxSize": 5,
       "required": "true"
     },
-    { "name": "Event",
+    {
+      "name": "Event",
       "code": "e",
       "type": "event",
       "defaultValue": "2026ilch",
       "required": "true"
     },
-    { "name": "Match #",
+    {
+      "name": "Match #",
       "code": "m",
       "type": "match",
       "min": 1,
       "max": 150,
       "required": "true"
     },
-    { "name": "Robot",
+    {
+      "name": "Robot",
       "code": "r",
       "type": "robot",
       "choices": {
@@ -38,25 +42,29 @@ var config_data = `
       },
       "required": "true"
     },
-    { "name": "Team #",
+    {
+      "name": "Team #",
       "code": "t",
       "type": "team",
       "min": 1,
       "max": 99999
-    },
+    }
   ],
   "auton": [
-    { "name": "Auto Shooting Time",
+    {
+      "name": "Auto Shooting Time",
       "code": "ast",
       "Max": 20,
       "Min": 0,
       "type": "number"
     },
-    { "name": "Pass from Neutral Zone",
+    {
+      "name": "Pass from Neutral Zone",
       "code": "apn",
       "type": "bool"
     },
-    { "name": "Climb (L1)",
+    {
+      "name": "Climb (L1)",
       "code": "ac",
       "type": "radio",
       "choices": {
@@ -66,47 +74,57 @@ var config_data = `
       },
       "defaultValue": "x"
     },
-    { "name": "Pickup from Depot",
+    {
+      "name": "Pickup from Depot",
       "code": "afd",
       "type": "bool"
     },
-    { "name": "Pickup from Outpost",
+    {
+      "name": "Pickup from Outpost",
       "code": "afo",
       "type": "bool"
     },
-    { "name": "Pickup from Neutral Zone",
+    {
+      "name": "Pickup from Neutral Zone",
       "code": "aff",
       "type": "bool"
     }
   ],
   "teleop": [
-    { "name": "Teleop Shooting Time",
+    {
+      "name": "Teleop Shooting Time",
       "code": "tst",
       "Max": 135,
       "Min": 0,
       "type": "number"
     },
-    { "name": "Pass from Neutral Zone",
+    {
+      "name": "Pass from Neutral Zone",
       "code": "pnz",
       "type": "bool"
     },
-    { "name": "Pass from Opp Alliance Zone",
+    {
+      "name": "Pass from Opp Alliance Zone",
       "code": "poa",
       "type": "bool"
     },
-    { "name": "Pickup from Depot",
+    {
+      "name": "Pickup from Depot",
       "code": "tfd",
       "type": "bool"
     },
-    { "name": "Pickup from Outpost",
+    {
+      "name": "Pickup from Outpost",
       "code": "tfo",
       "type": "bool"
     },
-    { "name": "Pickup from Floor",
+    {
+      "name": "Pickup from Floor",
       "code": "tff",
       "type": "bool"
     },
-     { "name": "Human Player Skill",
+    {
+      "name": "Human Player Skill",
       "code": "hps",
       "type": "radio",
       "choices": {
@@ -120,7 +138,8 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Climb",
+    {
+      "name": "Climb",
       "code": "tc",
       "type": "radio",
       "choices": {
@@ -134,7 +153,8 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Defense Rating",
+    {
+      "name": "Defense Rating",
       "code": "dr",
       "type": "radio",
       "choices": {
@@ -146,35 +166,42 @@ var config_data = `
       },
       "defaultValue": "x"
     },
-    { "name": "Crossed Bump",
+    {
+      "name": "Crossed Bump",
       "code": "bmp",
       "type": "bool"
     },
-    { "name": "Crossed Trench",
+    {
+      "name": "Crossed Trench",
       "code": "tre",
       "type": "bool"
     },
-    { "name": "Died/Immobilized",
+    {
+      "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
     },
-    { "name": "Tippy<br>(almost tipped over)",
+    {
+      "name": "Tippy<br>(almost tipped over)",
       "code": "tip",
       "type": "bool"
     },
-    { "name": "Was Defended",
+    {
+      "name": "Was Defended",
       "code": "def",
       "type": "bool"
     },
-    { "name": "Excessive Penalties",
+    {
+      "name": "Excessive Penalties",
       "code": "pen",
       "type": "bool"
     },
-    { "name": "Comments",
+    {
+      "name": "Comments",
       "code": "co",
       "type": "text",
       "size": 15,
       "maxSize": 100
     }
   ]
-}`;
+}';
