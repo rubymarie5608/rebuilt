@@ -107,19 +107,6 @@ var config_data = `
       "name": "Floor Pickup",
       "code": "fpt",
       "type": "bool"
-    },
-    {
-      "name": "Human Player Skill",
-      "code": "hps",
-      "type": "radio",
-      "choices": {
-        "a": "Made All<br>",
-        "s": "Made Some<br>",
-        "f": "Made Few<br>",
-        "n": "Made None<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
     }
   ],
   "endgame": [
@@ -138,37 +125,14 @@ var config_data = `
     }
   ],
   "postmatch": [
-     {
-      "name": "Defense Rating",
-      "code": "dr",
-      "type": "radio",
-      "choices": {
-        "e": "Excellent<br>",
-        "g": "Good<br>",
-        "a": "Average<br>",
-        "b": "Below Average<br>",
-        "x": "Did not play defense"
-      },
-      "defaultValue": "x"
-     },
-     {
-      "name": "Was Defended",
-      "code": "def",
-      "type": "bool"
-    },
     {
       "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
     },
     {
-      "name": "Tippy<br>(almost tipped over)",
-      "code": "tip",
-      "type": "bool"
-    },
-    {
-      "name": "Recieved Excessive Penalties",
-      "code": "rep",
+      "name": "Beached<br>(Stuck on balls or bump)",
+      "code": "bea",
       "type": "bool"
     },
     {
