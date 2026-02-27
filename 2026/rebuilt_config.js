@@ -17,7 +17,7 @@ var config_data = `
       "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2026ilch",
+      "defaultValue": "2026okok",
       "required": "true"
     },
     {
