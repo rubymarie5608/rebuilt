@@ -89,7 +89,7 @@ var config_data = `
     {
       "name": "Teleop Shooting Time",
       "code": "tst",
-      "Max": 135,
+      "Max": 70,
       "Min": 0,
       "type": "number"
     },
