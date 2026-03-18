@@ -74,7 +74,7 @@ var config_data = `
        "10032": "10,032",
        "11091": "11,091"
     }
-  ],
+  },
   "auton": [
    {
       "name": "Move From Starting Point",
