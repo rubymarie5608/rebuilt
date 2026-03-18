@@ -636,6 +636,64 @@ function addRadio(table, idx, name, data) {
   return idx + 1;
 }
 
+function addDropdown(table, idx, name, data) {
+  var row = table.insertRow(idx);
+  var cell1 = row.insertCell(0);
+  cell1.style.width = ColWidth;
+  cell1.classList.add("title");
+
+  if (!data.hasOwnProperty('code')) {
+    cell1.innerHTML = `Error: No code specified for ${name}`;
+    return idx + 1;
+  }
+
+  var cell2 = row.insertCell(1);
+  cell2.style.width = ColWidth;
+  cell1.innerHTML = name + '&nbsp;';
+
+  if (data.hasOwnProperty('tooltip')) {
+    cell1.setAttribute("title", data.tooltip);
+  }
+
+  cell2.classList.add("field");
+
+  // CREATE DROPDOWN
+  var select = document.createElement("select");
+  select.setAttribute("id", "input_" + data.code);
+
+  if (enableGoogleSheets && data.hasOwnProperty('gsCol')) {
+    select.setAttribute("name", data.gsCol);
+  } else {
+    select.setAttribute("name", data.code);
+  }
+
+  // ADD OPTIONS
+  if (data.hasOwnProperty('choices')) {
+    Object.keys(data.choices).forEach(c => {
+      var option = document.createElement("option");
+      option.setAttribute("value", c);
+      option.innerHTML = data.choices[c];
+      select.appendChild(option);
+    });
+  }
+
+  // DEFAULT VALUE
+  if (data.hasOwnProperty('defaultValue')) {
+    select.value = data.defaultValue;
+  }
+
+  cell2.appendChild(select);
+
+  // HIDDEN DISPLAY FIELD (same pattern as radio)
+  var inp = document.createElement("input");
+  inp.setAttribute("id", "display_" + data.code);
+  inp.setAttribute("hidden", "");
+  inp.setAttribute("value", "");
+  cell2.appendChild(inp);
+
+  return idx + 1;
+}
+
 function addCheckbox(table, idx, name, data) {
   var row = table.insertRow(idx);
   var cell1 = row.insertCell(0);
