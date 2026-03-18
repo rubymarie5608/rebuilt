@@ -75,7 +75,7 @@ var config_data = `
        "11091": "11,091"
     }
   },
-  "auton": [
+  "auton": {
    {
       "name": "Move From Starting Point",
       "code": "msp",
@@ -109,8 +109,8 @@ var config_data = `
       },
       "defaultValue": "x"
     }
-  ],
-  "teleop": [
+  },
+  "teleop": {
     {
       "name": "Teleop Shooting Time",
       "code": "tst",
@@ -133,8 +133,8 @@ var config_data = `
       "code": "fpt",
       "type": "bool"
     }
-  ],
-  "endgame": [
+  },
+  "endgame": {
     {
       "name": "Climb",
       "code": "tc",
@@ -148,7 +148,7 @@ var config_data = `
       },
       "defaultValue": "x"
     }
-  ],
+  },
   "postmatch": [
     {
       "name": "Died/Immobilized",
