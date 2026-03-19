@@ -47,7 +47,7 @@ var config_data = `
       "code": "t",
       "type": "dropdown",
       "choices": {
-       "": "-- Select Team --",
+       "Select": "-- Select Team --",
        "148": "148",
        "1,164": "1164",
        "2,714": "2714",
