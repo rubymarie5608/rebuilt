@@ -1127,9 +1127,9 @@ function clearForm() {
         if (e.checked == true) {
           e.checked = false
         }
-      } else {
-        console.log("unsupported input type")
-      }
+     } else if (e.tagName == "Select") {
+  		e.selectedIndex = 0;
+		}
     }
   }
   drawFields()
