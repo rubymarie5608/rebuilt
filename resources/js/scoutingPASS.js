@@ -677,12 +677,22 @@ function addDropdown(table, idx, name, data) {
     });
   }
 
-  // DEFAULT VALUE
+  // STORE DEFAULT hidden input
+  if (data.hasOwnProperty('defaultValue')) {
+    var def = document.createElement("input");
+    def.setAttribute("id", "default_" + data.code);
+    def.setAttribute("type", "hidden");
+    def.setAttribute("value", data.defaultValue);
+    cell2.appendChild(def);
+  }
+
+  // APPEND SELECT TO DOM
+  cell2.appendChild(select);
+
+  // SET DEFAULT VALUE after select is in the DOM
   if (data.hasOwnProperty('defaultValue')) {
     select.value = data.defaultValue;
   }
-
-  cell2.appendChild(select);
 
   // HIDDEN DISPLAY FIELD (same pattern as radio)
   var inp = document.createElement("input");
@@ -781,6 +791,8 @@ function addElement(table, idx, data) {
   } else if ((data.type == 'timer') ||
     (data.type == 'cycle')) {
     idx = addTimer(table, idx, name, data);
+  } else if (data.type == 'dropdown') {
+    idx = addDropdown(table, idx, name, data);
   } else {
     console.log(`Unrecognized type: ${data.type}`);
   }
@@ -1545,24 +1557,3 @@ window.onload = function () {
     }
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
