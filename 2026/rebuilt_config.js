@@ -45,9 +45,9 @@ var config_data = `
     {
       "name": "Team #",
       "code": "t",
-      "defaultValue": " ",
       "type": "dropdown",
       "choices": {
+       "--Select Team--": ""
        "148": "148",
        "1164": "1,164",
        "2714": "2,714",
