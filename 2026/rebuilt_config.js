@@ -77,7 +77,6 @@ var config_data = `
        },
        "defaultValue": "Select"
       }
-       "required": "true"
   ],
   "auton": [
    {
