@@ -80,7 +80,7 @@ var config_data = `
   ],
   "auton": [
    {
-      "name": "Move From Starting Point",
+      "name": "Move During Auto",
       "code": "msp",
       "type": "bool"
     },
