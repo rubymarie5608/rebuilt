@@ -82,7 +82,6 @@ var config_data = `
        "11,469": "11469"
        },
        "defaultValue": "Select"
-       "required": "true"
       }
   ],
   "auton": [
