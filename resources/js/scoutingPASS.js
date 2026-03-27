@@ -1139,7 +1139,8 @@ function clearForm() {
         } else {
           e.selectedIndex = 0; // fallback if no default
         }
-	 }	  
+	  }	  
+	}	
   }
   drawFields()
 }
