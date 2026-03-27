@@ -1136,8 +1136,6 @@ function clearForm() {
 
         if (def && def.value !== "") {
           e.value = def.value; // restore default
-        } else {
-          e.selectedIndex = 0; // fallback if no default
         }
 	  }	  
 	}	
