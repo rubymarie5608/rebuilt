@@ -537,6 +537,7 @@ function addNumber(table, idx, name, data) {
   if ((data.type == 'team') ||
     (data.type == 'match')) {
     inp.setAttribute("onchange", "updateMatchStart(event)");
+	inp.setAttribute("onchange", "updateTeamDisplay()");
   }
   if (data.hasOwnProperty('min')) {
     inp.setAttribute("min", data.min);
@@ -612,6 +613,7 @@ function addRadio(table, idx, name, data) {
         inp.setAttribute("name", data.code);
       }
       inp.setAttribute("value", c);
+	  inp.setAttribute("onchange", "updateTeamDisplay()");
       if (checked == c) {
         inp.setAttribute("checked", "");
       }
@@ -660,6 +662,7 @@ function addDropdown(table, idx, name, data) {
   // CREATE DROPDOWN
   var select = document.createElement("select");
   select.setAttribute("id", "input_" + data.code);
+  select.setAttribute("onchange", "updateTeamDisplay()");
 
   if (enableGoogleSheets && data.hasOwnProperty('gsCol')) {
     select.setAttribute("name", data.gsCol);
