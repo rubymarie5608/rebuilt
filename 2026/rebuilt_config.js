@@ -33,12 +33,12 @@ var config_data = `
       "code": "r",
       "type": "robot",
       "choices": {
-        "r1": "Red-1",
-        "b1": "Blue-1<br>",
-        "r2": "Red-2",
-        "b2": "Blue-2<br>",
-        "r3": "Red-3",
-        "b3": "Blue-3"
+        "R1": "Red-1",
+        "B1": "Blue-1<br>",
+        "R2": "Red-2",
+        "B2": "Blue-2<br>",
+        "R3": "Red-3",
+        "B3": "Blue-3"
       },
       "required": "true"
     },
@@ -47,7 +47,7 @@ var config_data = `
       "code": "t",
       "type": "dropdown",
       "choices": {
-       "Select": "-- Select Team --",
+       "SELECT": "-- Select Team --",
        "1,164": "1164",
        "2,657": "2657",
        "3,310": "3310",
@@ -81,7 +81,7 @@ var config_data = `
        "11,465": "11465",
        "11,469": "11469"
        },
-       "defaultValue": "Select"
+       "defaultValue": "SELECT"
      }
   ],
   "auton": [
