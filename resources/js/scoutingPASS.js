@@ -1130,10 +1130,15 @@ function clearForm() {
         if (e.checked == true) {
           e.checked = false
         }
-     } else if (e.tagName == "Select") {
-  		e.selectedIndex = 0;
-		}
-    }
+      } else if (e.tagName == "SELECT") {
+  	    let code = e.id.substring(6); // gets the code after "input_"
+        let def = document.getElementById("default_" + code);
+
+        if (def && def.value !== "") {
+          e.value = def.value; // restore default
+        } else {
+          e.selectedIndex = 0; // fallback if no default
+        }
   }
   drawFields()
 }
